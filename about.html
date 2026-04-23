@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,22 +25,18 @@
       --light-beige: #EDEBE6;
     }
 
-    /* Navbar */
     .navbar {
       background-color: var(--sage-dark) !important;
     }
 
-    /* Header */
     .bg-dark {
       background-color: var(--sage-dark) !important;
     }
 
-    /* Light section */
     .bg-light {
       background-color: var(--light-beige) !important;
     }
 
-    /* Buttons */
     .btn-primary {
       background-color: var(--sage);
       border-color: var(--sage);
@@ -51,32 +47,27 @@
       border-color: var(--sage-dark);
     }
 
-    /* Progress bars */
     .progress-bar {
       background-color: var(--sage);
     }
 
-    /* Text */
     .text-muted {
       color: #6B756B !important;
     }
 
-    h1, h2, h4 {
+    h1, h2, h4, h5 {
       color: #2F3A30;
     }
 
-    /* List styling */
     .list-group-item {
       background-color: transparent;
       border-color: #D6D3CD;
     }
 
-    /* Rounded modern feel */
     .progress, .list-group-item {
       border-radius: 10px;
     }
 
-    /* Footer */
     footer {
       background-color: var(--sage-dark);
     }
@@ -118,10 +109,10 @@
 
         <!-- Profile -->
         <div class="col-md-4 text-center">
-          <div class="rounded-circle d-inline-flex align-items-center justify-content-center"
-               style="width:180px; height:180px; background-color:#DDE3D6;">
-            <i class="bi bi-person-fill" style="font-size:5rem; color:#7E9270;"></i>
-          </div>
+          <img src="profile.jpg"
+               alt="Profile Picture"
+               class="rounded-circle"
+               style="width:180px; height:180px; object-fit:cover;">
           <h4 class="mt-3 fw-bold">Aakriti Roka</h4>
           <p class="text-muted">IS436 – System Analysis Student</p>
         </div>
@@ -146,6 +137,16 @@
             <li class="list-group-item px-0"><strong>Course:</strong> IS436 – System Analysis</li>
             <li class="list-group-item px-0"><strong>Year:</strong> 2026</li>
           </ul>
+
+          <!-- Hobbies -->
+          <h5 class="mt-4">Hobbies</h5>
+          <div class="mt-2">
+            <span class="badge bg-secondary me-1">Listening to Music</span>
+            <span class="badge bg-secondary me-1">Hiking </span>
+            <span class="badge bg-secondary me-1">Watching Tv and Movies</span>
+            <span class="badge bg-secondary">Swimming</span>
+          </div>
+
         </div>
 
       </div>
