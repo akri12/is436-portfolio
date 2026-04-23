@@ -1,16 +1,109 @@
+```html id="t7d9hk"
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio – Projects</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Custom Style -->
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #F6F5F2;
+      color: #3E4A3F;
+    }
+
+    :root {
+      --sage: #9CAF88;
+      --sage-dark: #7E9270;
+      --cream: #F6F5F2;
+      --light-beige: #EDEBE6;
+    }
+
+    .navbar {
+      background-color: var(--sage-dark) !important;
+    }
+
+    .bg-dark {
+      background-color: var(--sage-dark) !important;
+    }
+
+    .bg-light {
+      background-color: var(--light-beige) !important;
+    }
+
+    .bg-primary {
+      background-color: var(--sage) !important;
+    }
+
+    .btn-primary {
+      background-color: var(--sage);
+      border-color: var(--sage);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--sage-dark);
+    }
+
+    .text-primary {
+      color: var(--sage) !important;
+    }
+
+    .text-muted {
+      color: #6B756B !important;
+    }
+
+    h1, h2, h5 {
+      color: #2F3A30;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .card-header {
+      background-color: var(--sage);
+      color: white;
+      font-weight: 600;
+    }
+
+    .badge {
+      background-color: #DDE3D6 !important;
+      color: #2F3A30;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--sage);
+      color: var(--sage);
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--sage);
+      color: white;
+    }
+
+    footer {
+      background-color: var(--sage-dark);
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">MyPortfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -18,10 +111,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active text-white" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -31,31 +124,28 @@
   <section class="bg-dark text-white py-4">
     <div class="container">
       <h1 class="fw-bold">My Projects</h1>
-      <p class="text-secondary mb-0">Work I completed in IS436 System Analysis.</p>
+      <p class="text-light mb-0">Work I completed in IS436 System Analysis.</p>
     </div>
   </section>
 
-  <!-- Projects Grid -->
+  <!-- Projects -->
   <section class="py-5">
     <div class="container">
       <div class="row g-4">
 
-        <!-- Project 1 -->
+        <!-- Project Card Template -->
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-header bg-primary text-white">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header">
               <i class="bi bi-file-earmark-text me-2"></i>Project 1
             </div>
             <div class="card-body">
               <h5 class="card-title">System Requirements Document</h5>
               <p class="card-text text-muted">
-                Analyzed a real-world business problem and documented functional and non-functional requirements
-                using structured templates.
+                Analyzed a real-world business problem and documented requirements.
               </p>
-              <div class="mt-2">
-                <span class="badge bg-primary me-1">Analysis</span>
-                <span class="badge bg-secondary me-1">Documentation</span>
-              </div>
+              <span class="badge me-1">Analysis</span>
+              <span class="badge">Documentation</span>
             </div>
             <div class="card-footer bg-white border-0">
               <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
@@ -65,110 +155,100 @@
 
         <!-- Project 2 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-header bg-success text-white">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header">
               <i class="bi bi-diagram-2 me-2"></i>Project 2
             </div>
             <div class="card-body">
               <h5 class="card-title">Use Case Diagrams</h5>
               <p class="card-text text-muted">
-                Designed use case diagrams and user stories to model interactions between users and the proposed system.
+                Designed use case diagrams and user stories.
               </p>
-              <div class="mt-2">
-                <span class="badge bg-success me-1">UML</span>
-                <span class="badge bg-secondary me-1">Use Cases</span>
-              </div>
+              <span class="badge me-1">UML</span>
+              <span class="badge">Use Cases</span>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="#" class="btn btn-sm btn-outline-success">View Details</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
             </div>
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-header bg-warning text-dark">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header">
               <i class="bi bi-database me-2"></i>Project 3
             </div>
             <div class="card-body">
               <h5 class="card-title">Data Flow Diagrams</h5>
               <p class="card-text text-muted">
-                Created context-level and level-1 DFDs to illustrate how data moves through the system.
+                Created DFDs to illustrate system processes.
               </p>
-              <div class="mt-2">
-                <span class="badge bg-warning text-dark me-1">DFD</span>
-                <span class="badge bg-secondary me-1">Modeling</span>
-              </div>
+              <span class="badge me-1">DFD</span>
+              <span class="badge">Modeling</span>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="#" class="btn btn-sm btn-outline-warning">View Details</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
             </div>
           </div>
         </div>
 
         <!-- Project 4 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-header bg-info text-white">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header">
               <i class="bi bi-kanban me-2"></i>Project 4
             </div>
             <div class="card-body">
               <h5 class="card-title">Entity-Relationship Diagram</h5>
               <p class="card-text text-muted">
-                Built an ER diagram to model the database structure for the proposed information system.
+                Modeled database structures using ER diagrams.
               </p>
-              <div class="mt-2">
-                <span class="badge bg-info me-1">ERD</span>
-                <span class="badge bg-secondary me-1">Database</span>
-              </div>
+              <span class="badge me-1">ERD</span>
+              <span class="badge">Database</span>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="#" class="btn btn-sm btn-outline-info">View Details</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
             </div>
           </div>
         </div>
 
         <!-- Project 5 -->
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-header bg-danger text-white">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header">
               <i class="bi bi-laptop me-2"></i>Project 5
             </div>
             <div class="card-body">
               <h5 class="card-title">Prototype / Mockup</h5>
               <p class="card-text text-muted">
-                Designed a low-fidelity prototype of the system interface using wireframing tools and gathered user feedback.
+                Designed wireframes and gathered user feedback.
               </p>
-              <div class="mt-2">
-                <span class="badge bg-danger me-1">UI/UX</span>
-                <span class="badge bg-secondary me-1">Prototype</span>
-              </div>
+              <span class="badge me-1">UI/UX</span>
+              <span class="badge">Prototype</span>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="#" class="btn btn-sm btn-outline-danger">View Details</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
             </div>
           </div>
         </div>
 
-        <!-- Project 6 – Final -->
+        <!-- Final Project -->
         <div class="col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0 border-top border-dark border-4">
-            <div class="card-header bg-dark text-white">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header">
               <i class="bi bi-trophy me-2"></i>Final Project
             </div>
             <div class="card-body">
               <h5 class="card-title">Complete System Proposal</h5>
               <p class="card-text text-muted">
-                Combined all deliverables into a full system analysis report and presented the solution to stakeholders.
+                Combined all deliverables into a full system analysis report.
               </p>
-              <div class="mt-2">
-                <span class="badge bg-dark me-1">Capstone</span>
-                <span class="badge bg-secondary me-1">Presentation</span>
-              </div>
+              <span class="badge me-1">Capstone</span>
+              <span class="badge">Presentation</span>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="#" class="btn btn-sm btn-dark">View Details</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
             </div>
           </div>
         </div>
@@ -177,19 +257,19 @@
     </div>
   </section>
 
- 
-
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
+  <footer class="text-white text-center py-3">
     <p class="mb-0">&copy; 2026 MyPortfolio. Built with Bootstrap 5.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- AI Portfolio Chat Widget -->
+  <!-- Chat Widget -->
   <iframe src="chat.html"
           style="position:fixed;bottom:0;right:0;width:420px;height:620px;border:none;z-index:9999;"
           title="Portfolio AI Assistant">
   </iframe>
+
 </body>
 </html>
+```
